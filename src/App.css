@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* General app styles */
+.app-container {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #374151; /* Slate gray */
+  background: linear-gradient(135deg, #e0f2fe, #dbeafe, #eef2ff); /* gradient */
   min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3a8a, #1e40af); /* darker gradient */
   color: white;
+  padding: 8px 16px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
 }
 
-.App-link {
-  color: #61dafb;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-icon {
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, color 0.2s;
+}
+.nav-icon:hover {
+  transform: scale(1.1);
+  color: #fdba74; /* light orange hover */
+}
+
+.nav-title {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Content wrapper */
+.content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grid and Cards */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  flex: 1 1 180px;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid transparent; /* default border hidden */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+  border-color: #fdba74; /* light orange border */
+}
+
+.card h3 {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* Icons inside cards */
+.icon {
+  font-size: 20px;
+  color: #2563eb; /* primary blue */
+  transition: color 0.15s;
+}
+
+.card:hover .icon {
+  color: #fdba74; /* light orange on hover */
 }

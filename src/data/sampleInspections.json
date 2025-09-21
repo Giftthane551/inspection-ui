@@ -1,0 +1,117 @@
+[
+  {
+    "category": "Vehicle",
+    "inspections": [
+      {
+        "id": "engine",
+        "name": "Engine Inspection",
+        "lines": [
+          {
+            "id": "engine_status",
+            "label": "Engine Status",
+            "type": "state",
+            "required": true,
+            "options": ["Good", "Bad", "Excellence"]
+          },
+          {
+            "id": "engine_photos",
+            "label": "Upload Engine Photos",
+            "type": "photo",
+            "required": "conditional",
+            "condition": "{{severity_level}}>50"
+          },
+          {
+            "id": "notes",
+            "label": "Notes",
+            "type": "text",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "brakes",
+        "name": "Brakes Inspection",
+        "lines": [
+          {
+            "id": "brake_condition",
+            "label": "Brake Condition",
+            "type": "state",
+            "required": true,
+            "options": ["Good", "Bad", "Excellence"]
+          },
+          {
+            "id": "brake_photos",
+            "label": "Brake Photos",
+            "type": "photo",
+            "required": false
+          },
+          {
+            "id": "notes",
+            "label": "Notes",
+            "type": "text",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Site",
+    "inspections": [
+      {
+        "id": "site_safety",
+        "name": "Site Safety Check",
+        "lines": [
+          {
+            "id": "hazards",
+            "label": "Hazards Present?",
+            "type": "yesno",
+            "required": true
+          },
+          {
+            "id": "site_photos",
+            "label": "Site Photos",
+            "type": "photo",
+            "required": false
+          },
+          {
+            "id": "site_notes",
+            "label": "Site Notes",
+            "type": "text",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Supplier",
+    "inspections": [
+      {
+        "id": "supplier_quality",
+        "name": "Supplier Quality Audit",
+        "lines": [
+          {
+            "id": "cert_valid",
+            "label": "Certification Valid?",
+            "type": "yesno",
+            "required": true
+          },
+          {
+            "id": "audit_photos",
+            "label": "Audit Photos",
+            "type": "photo",
+            "required": false
+          },
+          
+          {
+            "id": "audit_notes",
+            "label": "Audit Notes",
+            "type": "text",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]
